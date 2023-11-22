@@ -20,7 +20,7 @@ free(w);
 int main() { int n;// declaramos variable n
 
 // Pedri el ingreso de los datos
-printf("Enter the size of the square matrix: ");// ingresar los datos 
+printf("tamañano de la amtriz: ");// ingresar los datos y tamanño general
 scanf("%d", &n);
 
 // Revisar los datos de una matriz
