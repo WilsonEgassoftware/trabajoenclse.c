@@ -7,7 +7,7 @@ void diagonalizeMatrix(int n, double *matrix) { int lda = n; int info; double *w
 info = LAPACKE_dsyev( 'V', 'U', n, matrix, lda, w);
 
 // revisamos 
-printf("Eigenvalues:\n");
+printf("Evaluamos:\n");//revisamos todo en esos datos
 for (int i = 0; i < n; ++i) {
     printf("%lf\n", w[i]);
 }
@@ -20,7 +20,7 @@ free(w);
 int main() { int n;
 
 // Pedri el ingreso de los datos
-printf("Enter the size of the square matrix: ");
+printf("Enter the size of the square matrix: ");// ingresar los datos 
 scanf("%d", &n);
 
 // Revisar los datos de una matriz
@@ -34,7 +34,7 @@ for (int i = 0; i < n * n; ++i) {
 // Llamamos a la funcion
 diagonalizeMatrix(n, matrix);
 
-
+//liberar espacio de memoria
 free(matrix);
 
 return 0;
