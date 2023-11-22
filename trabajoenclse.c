@@ -9,7 +9,7 @@ info = LAPACKE_dsyev( 'V', 'U', n, matrix, lda, w);
 // revisamos 
 printf("Evaluamos:\n");//revisamos todo en esos datos
 for (int i = 0; i < n; ++i) {
-    printf("%lf\n", w[i]);
+    printf("%lf\n", w[i]);//verificamos con el ciclo for y todos los datos
 }
 
 // memeoria libre
@@ -17,7 +17,7 @@ free(work);
 free(w);
 }
 
-int main() { int n;
+int main() { int n;// declaramos variable n
 
 // Pedri el ingreso de los datos
 printf("Enter the size of the square matrix: ");// ingresar los datos 
@@ -32,7 +32,7 @@ for (int i = 0; i < n * n; ++i) {
 }
 
 // Llamamos a la funcion
-diagonalizeMatrix(n, matrix);
+diagonalizeMatrix(n, matrix);//finalmennte tenemos todo lo final al respecto
 
 //liberar espacio de memoria
 free(matrix);
