@@ -3,10 +3,10 @@
 
 void diagonalizeMatrix(int n, double *matrix) { int lda = n; int info; double *work = (double *)malloc(3 * n * sizeof(double)); double *w = (double *)malloc(n * sizeof(double));
 
-// Diagonalizamos la matriz
+// Diagonalizamos la matriz en v ,u,w y  la matriz
 info = LAPACKE_dsyev( 'V', 'U', n, matrix, lda, w);
 
-// revisamos 
+// Evaluamos usando el ciclo for para saber si confirma la evaluación 
 printf("Evaluamos:\n");//revisamos todo en esos datos
 for (int i = 0; i < n; ++i) {
     printf("%lf\n", w[i]);//verificamos con el ciclo for y todos los datos
